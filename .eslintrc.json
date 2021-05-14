@@ -23,6 +23,7 @@
   ],
   "rules": {
     "react/prop-types": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "camelcase": "off"
   }
 }

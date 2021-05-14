@@ -1,0 +1,110 @@
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content
+  }
+}
+
+.featured {
+  height: 100vh;
+
+  @include tablet { height: 85vh; }
+
+  .featuredVertical {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, var(--gray-700) 10%, transparent 90%);
+
+    .featuredHorizontal {
+      width: inherit;
+      height: inherit;
+      background: linear-gradient(to right, var(--gray-700) 30%, transparent 70%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 2rem;
+      padding-bottom: 10rem;
+      padding-top: 4.2rem;
+
+      .featuredName {
+        font-size: 4.2rem;
+        font-weight: bold;
+
+        @include tablet { font-size: 2.1; }
+      }
+
+      .featuredInfo {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        font-weight: bold;
+
+        @include tablet { font-size: 1rem; }
+
+        .featuredPoints,
+        .featuredYear,
+        .featuredSeasons {
+          display: inline-block;
+          margin-right: 0.9rem;
+        }
+
+        .featuredPoints {
+          color: #46d369;
+        }
+      }
+
+      .featuredDescription {
+        margin-top: 1rem;
+        font-size: 1.350rem;
+        color: var(--gray-400);
+        max-width: 40%;
+
+        @include tablet {
+          font-size: 1.120rem;
+          max-width: 100%;
+          margin-right: 2rem;
+          color: #ccc;
+        }
+      }
+
+      .featuredButtons {
+        margin-top: 1rem;
+
+        a {
+          display: inline-block;
+          font-size: 1.350rem;
+          font-weight: bold;
+          padding: 0.8rem 1.8rem;
+          border-radius: 0.3rem;
+          margin-right: 0.8rem;
+          opacity: 1;
+          transition: all ease 0.2s;
+
+          &:hover { opacity: 0.7; }
+
+          @include tablet {
+            font-size: 1.120rem;
+          }
+        }
+
+        .featuredPlayBtn {
+          background-color: var(--white);
+          color: #000;
+        }
+
+        .featuredMyListBtn {
+          background-color: var(--gray-500);
+        }
+      }
+
+      .featuredGenres {
+        margin-top: 1rem;
+        font-size: 1.325rem;
+        color: var(--gray-400);
+
+        @include tablet {
+          font-size: 1.120rem;
+        }
+      }
+    }
+  }
+}

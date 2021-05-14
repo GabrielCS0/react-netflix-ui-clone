@@ -1,0 +1,29 @@
+.movieList {
+  margin-top: -8.5rem;
+}
+
+.footerContainer {
+  margin: 2.5rem 0;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 98;
+  background-color: #000;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 200px;
+  }
+}

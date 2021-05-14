@@ -1,0 +1,78 @@
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content
+  }
+}
+
+.movieRow {
+  margin-bottom: 2rem;
+
+  &:hover .movieRowLeft, 
+  &:hover .movieRowRight {
+    opacity: 1;
+  }
+
+  h2 {
+    margin-left: 2rem;
+  }
+
+  .movieRowLeft,
+  .movieRowRight {
+    width: 2.7rem;
+    height: 19.235rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.3s;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 90;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include tablet {
+      opacity: 1;
+      height: 14.6rem;
+      margin-top: 2.5%;
+    }
+  }
+
+  .movieRowLeft {
+    left: 0;
+  }
+
+  .movieRowRight {
+    right: 0;
+  }
+
+  .movieRowListArea {
+    overflow-x: hidden;
+    padding-left: 2rem;
+
+    .movieRowList {
+      transition: all ease-out 0.5s;
+
+      .movieRowItem {
+        display: inline-block;
+        cursor: pointer;
+        width: 205px;
+
+        @include tablet { width: 150px; }
+
+        img {
+          width: 100%;
+          transform: scale(0.9);
+          transition: all ease 0.2s;
+
+          &:hover {
+            transform: scale(1);
+
+            @include tablet { transform: scale(0.9); }
+          }
+        }
+      }
+    }
+  }
+}
