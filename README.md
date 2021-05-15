@@ -8,7 +8,7 @@
 
 ## Project
 
-This is a netflix ui clone that was developed using Next and React. The data were taken from the website [themoviedb.org](themoviedb.org) (TMDB).
+This is a netflix ui clone that was developed using Next and React. The data were taken from the website [themoviedb](themoviedb.org) (TMDB).
 
 ## Technologies Used
 
